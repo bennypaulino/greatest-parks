@@ -24,5 +24,19 @@ RSpec.describe PostsController, type: :controller do
       expect(post.body).to eq('New post!')
       expect(post.title).to eq('Hello')
     end
+
+    context "should properly deal with validation errors" do
+      it "has a title, but empty body" do
+        post :create, post: { title: 'No comment', body: '' }
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(Post.count).to eq 0
+      end
+
+      it "has no title, but it does have a body" do
+        post :create, post: { title: '', body: 'No good...' }
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(Post.count).to eq 0
+      end
+    end
   end
 end
