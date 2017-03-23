@@ -26,11 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'simple_form'
 
 # Helps speed up page load times. Shows errors in Heroku Logs.
 gem 'rails_12factor', group: :production
@@ -38,6 +34,9 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Testing framework
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
