@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [ :login ]
 
+  has_many :posts
+
   # Avoid conflicts between username & email being the same.
   def validate_username
     if User.where(email: username).exists?
