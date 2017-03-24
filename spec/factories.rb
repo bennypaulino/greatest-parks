@@ -8,6 +8,11 @@ FactoryGirl.define do
     last_name "McBoatface"
     password "secretPassword"
     password_confirmation "secretPassword"
+  end
 
+  factory :post do
+    title "A fitting name..."
+    body  "for the next aircraft carrier."
+    association :user
   end
 end
