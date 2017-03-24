@@ -56,3 +56,22 @@ body {
   margin-bottom: 15px;
   padding: 20px;
 }
+
+.card {
+  background-color: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #e8e8e8;
+  margin-top: 40px;
+  padding: 0;
+  p {
+    margin: 1em;
+    font-size: 1.2em;
+  }
+}
+
+.handle {
+  margin: .6em;
+  color: rgba(9, 121, 102, 0.91);
+  font-size: 1.4em;
+}
