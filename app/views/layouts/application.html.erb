@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Slabo+27px" rel="stylesheet">
   </head>
   <body>
     <% if notice.present? %>
@@ -22,7 +23,9 @@
       
         <div class="add pull-right">
           <% if current_user %>
-            Welcome, <%= current_user.username %>.
+            <div class="greeting">
+              Welcome, <%= current_user.username %>.
+            </div>
             <%= link_to "New Post", new_post_path %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
           <% else %>

@@ -1,6 +1,50 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background-color: #fdfdfd;
+  font-family: 'Slabo 27px', serif;
+}
+
+.top-nav {
+  background-color: rgba(197, 245, 228, 0.5);
+  border-bottom-color: #edeeee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  height: 6rem;
+  padding: .5em 0;
+  font-size: 1.6rem;
+/*  a {
+    color: rgba(89, 193, 31, 0.89);
+    &:hover {
+      color: rgba(61, 111, 33, 0.89);
+    }*/
+  }
+  .add {
+    margin-top: 10px;
+    a {
+    color: rgba(89, 193, 31, 0.89);
+    padding-left: .4em;
+    &:hover {
+      color: rgba(61, 111, 33, 0.89);
+    }
+  }
+  .greeting {
+    display: inline;
+    padding-right: .5em;
+  }
+}
+
+.brand {
+  color: rgba(89, 193, 31, 0.89);
+  font-size: 3rem;
+  font-family: 'Eagle Lake', cursive;
+  letter-spacing: .1em;
+  &:hover {
+    color: rgba(61, 111, 33, 0.89);
+  }
+}
+
 .shadow-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -11,4 +55,60 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #e8e8e8;
+  margin-top: 40px;
+  padding: 0;
+  p {
+    margin: 1em;
+    font-size: 1.2em;
+  }
+}
+
+.handle {
+  margin: .6em;
+  color: rgba(9, 121, 102, 0.91);
+  font-size: 1.4em;
+}
+
+.card.form {
+  padding: 2em;
+}
+
+.field.remember {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.field.remember label {
+  margin-top: 5px;
+  line-height: 3.2em;
+}
+
+.comment {
+  font-size: 1.1em;
+  margin-top: .3em;
+}
+
+.comment_handle {
+  color: #337b0d;
+  font-size: 1.2em;
+}
+
+.time-stamp {
+  color: #b9b9b9;
+}
+
+.page-title {
+  font-size: 2.2rem;
+}
+
+.post-time {
+  float: right;
+  font-size: 1.6rem;
 }

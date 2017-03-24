@@ -1,19 +1,18 @@
-<div class="shadow-box col-xs-10 col-xs-offset-1">
+<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 card form">
   <h2>Log in</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :login %>
+    <div class="field form-inputs">
+      <%= f.input :login, autofocus: true, hint: ("* either your username or email *") %>
       <br>
-      <%= f.text_field :login, autofocus: true, hint: ("username or email") %>
+      <%= f.input :password, autocomplete: "off" %>
     </div>
-    <br>
-    <div class="field">
-      <%= f.label :password %>
-      <br>
-      <%= f.password_field :password, autocomplete: "off" %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-    </div>
+    <% if devise_mapping.rememberable? -%>
+      <div class="field remember">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
 
     <div class="form-actions">
       <%= f.button :submit, "Log in", class: 'btn btn-success' %>

@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [ :login ]
 
   has_many :posts
+  has_many :comments
 
   # Avoid conflicts between username & email being the same.
   def validate_username

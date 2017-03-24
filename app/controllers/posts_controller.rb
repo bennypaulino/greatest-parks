@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
@@ -19,9 +20,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_id(params[:id])
-    if @post.blank?
-      render text: 'Not Found', status: :not_found
-    end
+    return render_not_found if @post.blank?
   end
 
   private
