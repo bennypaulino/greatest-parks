@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
   describe "posts#show action" do
     it "should successfully show the page if the post is found" do
+
       post = FactoryGirl.create(:post)
       get :show, id: post.id
       expect(response).to have_http_status(:success)
