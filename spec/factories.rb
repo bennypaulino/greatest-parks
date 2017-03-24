@@ -3,7 +3,7 @@ FactoryGirl.define do
     sequence :email do |n|
       "dummyEmail#{n}@gmail.com"
     end
-    username "boatyMcBoatface"
+    sequence(:username, 1) { |n| "boatyMcBoatface#{n}" }
     first_name "Boaty"
     last_name "McBoatface"
     password "secretPassword"
