@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :comment do
-    
+    sequence(:comment_body, 1) { |n| "TROLOLOL#{n}" }
   end
+
   factory :user do
     sequence :email do |n|
       "dummyEmail#{n}@gmail.com"
